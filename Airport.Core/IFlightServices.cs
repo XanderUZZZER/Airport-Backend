@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Airport.Core
 {
-    public interface IAirportServices
+    public interface IFlightServices
     {
         Flight CreateFlight(Flight flight);
         Flight GetFlight(int id);

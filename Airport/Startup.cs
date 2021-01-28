@@ -20,7 +20,7 @@ namespace Airport.API
         {
             services.AddControllers();
             services.AddDbContext<AppDbContext>();
-            services.AddTransient<IAirportServices, AirportService>();
+            services.AddTransient<IFlightServices, FlightServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

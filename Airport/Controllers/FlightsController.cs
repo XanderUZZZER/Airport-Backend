@@ -13,23 +13,23 @@ namespace Airport.API.Controllers
     [ApiController]
     public class FlightsController : ControllerBase
     {
-        private IAirportServices _airportServices;
+        private IFlightServices _flightServices;
 
-        public FlightsController(IAirportServices airportServices)
+        public FlightsController(IFlightServices flightServices)
         {
-            _airportServices = airportServices;
+            _flightServices = flightServices;
         }
 
         [HttpGet]
         public IActionResult GetFlights()
         {            
-            return Ok(_airportServices.GetFlights());
+            return Ok(_flightServices.GetFlights());
         }
 
         [HttpGet("{id}", Name = "GetFlight")]
         public IActionResult GetFlight(int id)
         {
-            return Ok(_airportServices.GetFlight(id));
+            return Ok(_flightServices.GetFlight(id));
         }
 
         [HttpPost]
@@ -38,21 +38,21 @@ namespace Airport.API.Controllers
             flight.Arrival = DateTime.Parse(flight.Arrival.ToString());
             flight.Departure = DateTime.Parse(flight.Departure.ToString());
 
-            var newFlight = _airportServices.CreateFlight(flight);
+            var newFlight = _flightServices.CreateFlight(flight);
             return CreatedAtRoute("GetFlight", new { newFlight.Id }, newFlight);
         }
 
         [HttpPut]
         public IActionResult EditFlight([FromBody] Flight flight)
         {
-            _airportServices.EditFlight(flight);
+            _flightServices.EditFlight(flight);
             return Ok();
         }
 
         [HttpDelete("{id}")]
         public IActionResult DeleteFlight(int id)
         {
-            _airportServices.DeleteFlight(id);
+            _flightServices.DeleteFlight(id);
             return Ok();
         }
     }

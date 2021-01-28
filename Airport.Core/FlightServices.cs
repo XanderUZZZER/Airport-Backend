@@ -5,11 +5,11 @@ using System.Linq;
 
 namespace Airport.Core
 {
-    public class AirportService : IAirportServices
+    public class FlightServices : IFlightServices
     {
         private AppDbContext _context;
 
-        public AirportService(AppDbContext context)
+        public FlightServices(AppDbContext context)
         {
             _context = context;
         }
