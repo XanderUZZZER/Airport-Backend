@@ -26,10 +26,10 @@ namespace Airport.DB.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<DateTime>("Arrivals")
+                    b.Property<DateTime>("Arrival")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("Departures")
+                    b.Property<DateTime>("Departure")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Value")

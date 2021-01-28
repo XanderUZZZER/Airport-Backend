@@ -35,6 +35,9 @@ namespace Airport.API.Controllers
         [HttpPost]
         public IActionResult CreateFlight(Flight flight)
         {
+            flight.Arrival = DateTime.Parse(flight.Arrival.ToString());
+            flight.Departure = DateTime.Parse(flight.Departure.ToString());
+
             var newFlight = _airportServices.CreateFlight(flight);
             return CreatedAtRoute("GetFlight", new { newFlight.Id }, newFlight);
         }
