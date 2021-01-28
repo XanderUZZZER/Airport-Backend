@@ -21,6 +21,9 @@ namespace Airport.API
             services.AddControllers();
             services.AddDbContext<AppDbContext>();
             services.AddTransient<IFlightServices, FlightServices>();
+            services.AddTransient<IClientServices, ClientServices>();
+            services.AddTransient<ITicketServices, TicketServices>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
