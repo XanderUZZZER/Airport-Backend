@@ -1,3 +1,5 @@
+using Airport.Core;
+using Airport.DB;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -17,6 +19,8 @@ namespace Airport.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddDbContext<AppDbContext>();
+            services.AddTransient<IAirportServices, AirportService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

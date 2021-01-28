@@ -8,7 +8,7 @@ namespace Airport.DB
         [Key]
         public int Id { get; set; }
         public string Value { get; set; }
-        public DateTime Departures { get; set; }
-        public DateTime Arrivals { get; set; }
+        public DateTime Departure { get; set; }
+        public DateTime Arrival { get; set; }
     }
 }

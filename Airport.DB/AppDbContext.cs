@@ -2,13 +2,14 @@
 
 namespace Airport.DB
 {
-    class AppDbContex : DbContext
+    public class AppDbContext : DbContext
     {
         private readonly string _connectionString;
 
         public DbSet<Flight> Flights { get; set; }
 
-        public AppDbContex(string connectionString = @"Server=(localdb)\mssqllocaldb;Database=Airport")
+        public AppDbContext(string connectionString = @"workstation id=airport.mssql.somee.com;packet size=4096;user id=XanderUZZZER_SQLLogin_1;pwd=cq1dsb51y7;data source=airport.mssql.somee.com;persist security info=False;initial catalog=airport
+")
         {
             _connectionString = connectionString;
         }
