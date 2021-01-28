@@ -8,6 +8,8 @@ namespace Airport.DB
 
         public DbSet<Flight> Flights { get; set; }
         public DbSet<Client> Clients { get; set; }
+        public DbSet<Ticket> Tickets { get; set; }
+
 
         public AppDbContext(string connectionString = @"workstation id=airport.mssql.somee.com;packet size=4096;user id=XanderUZZZER_SQLLogin_1;pwd=cq1dsb51y7;data source=airport.mssql.somee.com;persist security info=False;initial catalog=airport
 ")
