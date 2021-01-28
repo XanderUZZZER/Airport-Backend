@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airport.API", "Airport\Airport.API.csproj", "{B7790FEE-89E9-4F38-BFDF-F33E0F95F818}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airport.DB", "Airport.DB\Airport.DB.csproj", "{702D159C-7C5D-4E8C-9D2D-49D1C2964882}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B7790FEE-89E9-4F38-BFDF-F33E0F95F818}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7790FEE-89E9-4F38-BFDF-F33E0F95F818}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7790FEE-89E9-4F38-BFDF-F33E0F95F818}.Release|Any CPU.Build.0 = Release|Any CPU
+		{702D159C-7C5D-4E8C-9D2D-49D1C2964882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{702D159C-7C5D-4E8C-9D2D-49D1C2964882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{702D159C-7C5D-4E8C-9D2D-49D1C2964882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{702D159C-7C5D-4E8C-9D2D-49D1C2964882}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
