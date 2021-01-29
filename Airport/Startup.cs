@@ -23,6 +23,18 @@ namespace Airport.API
             services.AddTransient<IFlightServices, FlightServices>();
             services.AddTransient<IClientServices, ClientServices>();
             services.AddTransient<ITicketServices, TicketServices>();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AirportPolicy",
+                builder =>
+                {
+                    builder.WithOrigins("*")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
